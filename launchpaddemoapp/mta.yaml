@@ -1,0 +1,23 @@
+ID: launchpaddemoapp
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: launchpaddemoapp
+   type: html5
+   path: launchpaddemoapp
+   parameters:
+     memory: 64M
+   properties:
+     CORS:
+       - uriPattern: .
+         allowedMethods:
+           - GET
+           - POST
+         allowedOrigin:
+           - host: '*'
+   provides:
+     - name: launchpaddemoapp_ref
+       public: true
+       properties:
+         url: '${default-url}'

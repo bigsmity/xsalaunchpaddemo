@@ -1,0 +1,12 @@
+{
+  "engines": {
+    "node": ">=8.12.0"
+  },
+  "name": "site-entry",
+  "dependencies": {
+    "@sap/site-entry": "1.9.x"
+  },
+  "scripts": {
+    "start": "node --harmony node_modules/@sap/site-entry/server.js"
+  }
+}

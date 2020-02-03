@@ -1,0 +1,68 @@
+ID: launchpaddemo
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: launchpaddemo-launchpaddemo
+   type: siteentry
+   path: launchpaddemo
+   parameters:
+      memory: 64M
+   requires:
+    - name: sap-portal-services-host-launchpaddemo
+    - name: portal-uaa-launchpaddemo
+    - name: sapui5-provider
+      properties:
+         sapui5url: ~{url}
+    - name: launchpaddemoapp_ref
+      group: destinations
+      properties:
+        name: launchpaddemoapp_dest
+        url: '~{url}'
+        forwardAuthToken: true
+
+
+ - name: launchpaddemo-Content-launchpaddemo
+   type: sitecontent
+   path: launchpaddemo-Content
+   parameters:
+      memory: 32M
+   requires:
+    - name: sap-portal-services-client-launchpaddemo
+    - name: portal-uaa-launchpaddemo
+
+resources:
+ - name: sap-portal-services-host-launchpaddemo
+   parameters:
+      config:
+         siteId: launchpaddemo
+   type: com.sap.portal.site-host
+
+ - name: portal-uaa-launchpaddemo
+   parameters:
+      service-plan: space
+   type: com.sap.xs.uaa
+
+
+ - name: sapui5-provider
+   parameters:
+      provider-id: com.sap.ui5.dist.sapui5-dist-xsa.XSAC_UI5_FESV5:sapui5_fesv5
+      version: '>=1.60.0'
+      provider-nid: mta
+   type: configuration
+
+
+ - name: sap-portal-services-client-launchpaddemo
+   parameters:
+      config:
+         siteId: launchpaddemo
+   type: com.sap.portal.site-content
+   
+   
+ - name: launchpaddemoapp_ref
+   type: configuration
+   parameters:
+      provider-nid: mta
+      provider-id: launchpaddemoapp:launchpaddemoapp_ref
+      version: '>=0.0.1'
+

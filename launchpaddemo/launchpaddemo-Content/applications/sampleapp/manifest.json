@@ -1,0 +1,53 @@
+{
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "6ef9cdd2-687e-11e6-8b77-86f30ca893d3",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{title}}",
+		"subTitle": "{{sub_title}}",
+		"icon": "sap-icon://person-placeholder",
+		"tags": {
+			"keywords": [
+
+			]
+		},
+		"crossNavigation": {
+			"inbounds": {
+				"appShow": {
+					"semanticObject": "app",
+					"action": "show",
+					"deviceTypes": {
+						"desktop": true,
+						"tablet": true,
+						"phone": true
+					},
+					"icon": "sap-icon://person-placeholder",
+					"size": "1x1",
+					"signature": {
+						"parameters": {},
+						"additionalParameters": "allowed"
+					},
+					"title": "{{title}}",
+					"subTitle": "{{sub_title}}",
+					"info": "{{info}}"
+				}
+			},
+			"outbounds": {
+
+			}
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5"
+	},
+	"sap.ui5": {
+		"componentName": "sap.ushell.demo.AppPersSample2",
+		"_version": "1.2.0"
+	},
+	"sap.platform.cf": {
+		"uri": "https://sapui5.hana.ondemand.com/test-resources/sap/ushell/demoapps/AppPersSample2",
+		"oAuthScopes": []
+	}
+}

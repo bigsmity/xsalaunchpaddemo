@@ -1,0 +1,174 @@
+{
+	"_version": "1.0.0",
+	"site": {
+		"_version": "1.0",
+		"identification": {
+			"id": "499c36e2-687e-11e6-8b77-86f30ca893d3",
+			"namespace": "",
+			"entityType": "site",
+			"description": "",
+			"i18n": "",
+			"title": "Fiori Launchpad Sample"
+		},
+		"payload": {
+			"groupsOrder": [
+				"5acadc20-687e-11e6-8b77-86f30ca893d3"
+			],
+			"config": {
+
+			},
+			"sap.cloud.portal": {
+				"_version": "1.2.0",
+				"config": {
+					"theme.id": "sap_belize",
+					"theme.active": "[\"sap_hcb\",\"sap_belize_plus\",\"sap_belize\"]"
+				}
+			}
+		}
+	},
+	"catalogs": {
+		"07889260-3021-4ef6-ba85-edd311738f9a": {
+			"_version": "1.1",
+			"identification": {
+				"id": "07889260-3021-4ef6-ba85-edd311738f9a",
+				"namespace": "",
+				"title": "{{sample_catalog_title}}",
+				"description": "{{sample_catalog_description}}",
+				"entityType": "catalog",
+				"i18n": "i18n/i18n.properties"
+			},
+			"payload": {
+				"appDescriptors": [{
+					"namespace": "",
+					"id": "6ef9cdd2-687e-11e6-8b77-86f30ca893d3"
+				}, {
+					"namespace": "",
+					"id": "73c3f80a-5245-4e6c-a51d-d9436b1cb530"
+				}]
+			}
+		}
+	},
+	"roles": {
+		"Everyone": {
+			"_version": "1.0",
+			"identification": {
+				"id": "Everyone",
+				"title": "Everyone",
+				"entityType": "role"
+			},
+			"payload": {
+				"catalogs": [
+
+				],
+				"groups": [{
+					"id": "5acadc20-687e-11e6-8b77-86f30ca893d3"
+				}]
+			}
+		}
+	},
+	"applications": {
+		"launchpaddemoapp": {
+	      "sap.app": {
+	        "_version": "1.3.0",
+	        "id": "launchpaddemoapp",
+	        "title": "launchpad demo app",
+	        "i18n": "i18n/bundle.properties",
+	        "tags": {
+	          "keywords": []
+	        },
+	        "crossNavigation": {
+	          "inbounds": {
+	            "siteShow": {
+	              "semanticObject": "launchpaddemoapp_sem_obj",
+	              "action": "show",
+	              "deviceTypes": {
+	                "desktop": true,
+	                "tablet": true,
+	                "phone": true
+	              	}
+	            }
+	          },
+	          "outbounds": {
+	          }
+	        }
+	      },
+	      "sap.ui": {
+	        "_version": "1.3.0",
+	        "technology": "UI5"
+	      },
+	      "sap.ui5": {
+	        "componentName": "launchpaddemoapp.launchpaddemoapp",
+	        "_version": "1.2.0"
+	      },
+	      "sap.platform.runtime": {
+	        "componentProperties": {
+	          "url": "/launchpaddemoapp_dest/webapp"
+	        }
+	      }
+	    }
+	},
+	"groups": {
+		"5acadc20-687e-11e6-8b77-86f30ca893d3": {
+			"identification": {
+				"id": "5acadc20-687e-11e6-8b77-86f30ca893d3",
+				"i18n": "i18n/i18n.properties",
+				"namespace": "",
+				"title": "{{group_title}}"
+			},
+			"payload": {
+				"tiles": [{
+					"id": "mySapTile",
+					"appId": "73c3f80a-5245-4e6c-a51d-d9436b1cb530",
+					"entityType": "tile",
+					"target": {
+						"semanticObject": "Sap",
+						"action": "show",
+						"parameters": [
+
+						]
+					}
+				}, {
+					"id": "myUi5Tile",
+					"appId": "6ef9cdd2-687e-11e6-8b77-86f30ca893d3",
+					"entityType": "tile",
+					"target": {
+						"semanticObject": "app",
+						"action": "show",
+						"parameters": [
+
+						]
+					}
+				},
+				{
+					"id": "launchpaddemoapp",	
+					"appId": "launchpaddemoapp",
+					"title": "launchpad demo app",
+					"description": "launchpad demo app cross mta",
+                    "icon": "sap-icon://account",						
+					"target": {
+						"semanticObject": "launchpaddemoapp_sem_obj",
+						"action": "show",
+						"parameters": []
+					}
+				}]
+			}
+		}
+	},
+	"siteThemes": {
+		"sap_hcb": {
+			"description": "SAP High Contrast Black",
+			"name": "sap_hcb",
+			"path": "sap_hcb"
+		},
+		"sap_belize_plus": {
+			"description": "SAP Belize Plus",
+			"name": "sap_belize_plus",
+			"path": "sap_belize_plus"
+		},
+		"sap_belize": {
+			"description": "SAP Belize",
+			"name": "sap_belize",
+			"path": "sap_belize"
+		}
+	}
+}
