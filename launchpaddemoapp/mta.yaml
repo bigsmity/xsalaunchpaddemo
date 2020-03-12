@@ -16,8 +16,19 @@ modules:
            - POST
          allowedOrigin:
            - host: '*'
+           
+   requires: 
+     - name: launchpaddemoapp_uaa
+     
    provides:
      - name: launchpaddemoapp_ref
        public: true
        properties:
          url: '${default-url}'
+         
+resources:
+ - name: launchpaddemoapp_uaa
+   parameters:
+   service: xsuaa
+   service-plan: space
+   type: com.sap.xs.uaa
