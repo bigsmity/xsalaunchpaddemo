@@ -102,7 +102,7 @@
 	      },
 	      "sap.platform.runtime": {
 	        "componentProperties": {
-	          "url": "/launchpaddemoapp_dest/webapp"
+	          "url": "/launchpaddemoapp_dest"
 	        }
 	      }
 	    }
