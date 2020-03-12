@@ -1,4 +1,5 @@
 {
+  "authenticationMethod": "route",
   "routes": [
   		{
 			"source": "^/launchpaddemoapp_dest/(.*)$",
