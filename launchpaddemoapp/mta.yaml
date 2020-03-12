@@ -24,7 +24,7 @@ modules:
      - name: launchpaddemoapp_ref
        public: true
        properties:
-         url: '${default-url}'
+         url: '${default-url}/webapp'
          
 resources:
  - name: launchpaddemoapp_uaa
