@@ -40,6 +40,8 @@ resources:
 
  - name: portal-uaa-launchpaddemo
    parameters:
+      path: ./xs-security.json
+      service: xsuaa
       service-plan: space
    type: com.sap.xs.uaa
 
