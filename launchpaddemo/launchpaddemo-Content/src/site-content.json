@@ -85,7 +85,11 @@
 	                "desktop": true,
 	                "tablet": true,
 	                "phone": true
-	              	}
+	              	},
+			"signature": {
+				"parameters": {},
+				"additionalParameters": "allowed"
+			}
 	            }
 	          },
 	          "outbounds": {
