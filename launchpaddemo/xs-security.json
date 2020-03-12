@@ -1,0 +1,7 @@
+{
+  "xsappname":"launchpaddemo-${space}",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of flp",
+  "scopes": [],
+  "role-templates": []
+}
