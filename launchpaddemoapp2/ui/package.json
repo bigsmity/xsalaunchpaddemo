@@ -1,0 +1,15 @@
+{
+	"name": "launchpaddemoapp2_ui",
+	"engines": {
+		"node": ">=4.0.0 <9.0.0"
+	},
+	"dependencies": {
+		"@sap/site-app-server": "^1.9.x",
+		"@sap/approuter": "6.1.0"
+
+	},
+	"scripts": {
+		"start": "node node_modules/@sap/site-app-server/index.js",
+		"dontstart": "node node_modules/@sap/approuter/approuter.js"
+	}
+}
