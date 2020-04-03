@@ -1,0 +1,12 @@
+{
+	"welcomeFile": "webapp/index.html",
+	"authenticationMethod": "route",
+	"routes": [{
+		"source": "^/launchpaddemoapp2_js_dest/(.*)$",
+		"destination": "launchpaddemoapp2_js_dest",
+		"target": "$1"
+	}, {
+		"source": "^/(.*)$",
+		"localDir": "resources/webapp"
+	}]
+}

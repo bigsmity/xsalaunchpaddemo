@@ -1,0 +1,37 @@
+<mvc:View controllerName="launchpaddemoapp2_ui.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table id="idAppDataTable" inset="false" items="{ path: 'app_data>/app_data', sorter: { path: 'Name' } }">
+						<columns>
+							<Column>
+								<Text text="Id"/>
+							</Column>
+							<Column>
+								<Text text="Name"/>
+							</Column>
+							<Column>
+								<Text text="Description"/>
+							</Column>
+							<Column>
+								<Text text="CreatedAt"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{Id}"/>
+									<Text text="{Name}"/>
+									<Text text="{Description}"/>
+									<Text text="{CreatedAt}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
