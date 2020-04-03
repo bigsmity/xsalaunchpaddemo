@@ -1,0 +1,89 @@
+ID: launchpaddemoapp2
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: launchpaddemoapp2_db
+   type: hdb
+   path: db
+   properties:
+      SAP_JWT_TRUST_ACL:
+        - clientid: '*'
+          identityzone: '*'
+   requires:
+    - name: launchpaddemoapp2_uaa
+    - name: hdi_launchpaddemoapp2_db
+      properties:
+        TARGET_CONTAINER: '~{hdi-container-name}'
+
+
+ - name: launchpaddemoapp2_js
+   type: nodejs
+   path: js
+   properties:
+     CORS:
+       - uriPattern: .
+         allowedMethods:
+           - GET
+           - POST
+         allowedOrigin:
+           - host: '*'
+     SAP_JWT_TRUST_ACL: 
+       - clientid: '*'
+         identityzone: '*' 
+   provides:
+    - name: launchpaddemoapp2_js_api
+      public: true
+      properties:
+         url: ${default-url}
+   requires:
+    - name: launchpaddemoapp2_uaa
+    - name: hdi_launchpaddemoapp2_db
+    - name: launchpaddemoapp2_db
+    
+    
+
+
+ - name: launchpaddemoapp2_ui
+   type: html5
+   path: ui
+   properties:
+     CORS:
+       - uriPattern: .
+         allowedMethods:
+           - GET
+           - POST
+         allowedOrigin:
+           - host: '*'
+     SAP_JWT_TRUST_ACL: 
+       - clientid: '*'
+         identityzone: '*' 
+   requires:
+    - name: flp-launchpaddemoapp2-client
+    - name: launchpaddemoapp2_uaa
+    - name: launchpaddemoapp2_js_api
+      group: destinations
+      properties:
+        name: launchpaddemoapp2_js_dest
+        url: '~{url}'
+        forwardAuthToken: true
+
+
+
+resources:
+ - name: hdi_launchpaddemoapp2_db
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: launchpaddemoapp2_uaa
+   parameters:
+      service: xsuaa
+      service-plan: space
+   type: com.sap.xs.uaa
+   
+ - name: flp-launchpaddemoapp2-client
+   type: com.sap.portal.site-content
+   parameters:
+      config:
+        siteId : launchpaddemo

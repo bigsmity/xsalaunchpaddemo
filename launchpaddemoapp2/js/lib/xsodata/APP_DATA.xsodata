@@ -1,0 +1,5 @@
+service  {
+	"tables::APP_DATA" as "app_data"
+	keys generate local "GEN_ID"
+	aggregates always;
+}

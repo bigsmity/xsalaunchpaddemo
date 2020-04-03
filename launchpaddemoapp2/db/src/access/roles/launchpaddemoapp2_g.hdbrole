@@ -1,0 +1,8 @@
+{
+	"role": {
+		"name": "roles::launchpaddemoapp2_g#",
+		"schema_privileges": [{
+			"privileges": ["SELECT METADATA", "SELECT", "SELECT", "INSERT", "UPDATE", "DELETE"]
+		}]
+	}
+}

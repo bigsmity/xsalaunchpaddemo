@@ -1,0 +1,8 @@
+namespace tables;
+
+entity APP_DATA {
+    key Id          : Integer;
+        Name        : String(10);
+        Description : String(40);
+        CreatedAt   : UTCTimestamp;
+};

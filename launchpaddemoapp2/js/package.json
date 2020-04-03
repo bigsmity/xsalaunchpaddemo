@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@sap/xsenv": "^2.0.0",
+    "@sap/xsjs": "^5.2.0"
+  },
+  "description": "my description",
+  "devDependencies": {
+    "@sap/xsjs-test": "^3.0.2"
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "launchpaddemoapp2_js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node testrun.js"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "version": "1.0.0"
+}
