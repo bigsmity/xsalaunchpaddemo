@@ -1,0 +1,88 @@
+{
+	"roles": {
+		"Everyone": {
+			"_version": "1.0",
+			"identification": {
+				"id": "Everyone",
+				"namespace": "",
+				"entityType": "role"
+			},
+			"payload": {
+				"catalogs": [],
+				"groups": [{
+					"id": "launchpaddemoapp2_ui_GroupId"
+				}]
+			}
+		}
+	},
+	"applications": {
+
+		"launchpaddemoapp2_ui": {
+			"sap.app": {
+				"_version": "1.3.0",
+				"id": "launchpaddemoapp2_ui",
+				"title": "Launchpad Demo App2",
+				"i18n": "i18n/i18n.properties",
+				"tags": {
+					"keywords": []
+				},
+				"crossNavigation": {
+					"inbounds": {
+						"launchpaddemoapp2_uiShow": {
+							"semanticObject": "launchpaddemoapp2_ui",
+							"action": "show",
+							"deviceTypes": {
+								"desktop": true,
+								"tablet": true,
+								"phone": true
+							},
+							"signature": {
+								"parameters": {},
+								"additionalParameters": "allowed"
+							}
+						}
+					},
+					"outbounds": {}
+				}
+			},
+			"sap.ui": {
+				"_version": "1.3.0",
+				"technology": "UI5"
+			},
+			"sap.ui5": {
+				"componentName": "launchpaddemoapp2_ui",
+				"_version": "1.2.0"
+			},
+			"sap.platform.runtime": {
+				"componentProperties": {
+					"url": "/"
+				}
+			}
+		}
+
+	},
+	"groups": {
+		"launchpaddemoapp2_ui_GroupId": {
+			"identification": {
+				"id": "launchpaddemoapp2_ui_GroupId",
+				"i18n": "i18n/i18n.properties",
+				"namespace": "",
+				"title": "Launchpad Demo App"
+			},
+			"payload": {
+				"tiles": [{
+					"id": "launchpaddemoapp2_ui_tile",
+					"title": "Launchpad Demo App2",
+					"subTitle": "launchpad demo app2",
+					"icon": "sap-icon://share-2",
+					"appId": "launchpaddemoapp2_ui",
+					"target": {
+						"semanticObject": "launchpaddemoapp2_ui",
+						"action": "show",
+						"parameters": []
+					}
+				}]
+			}
+		}
+	}
+}
