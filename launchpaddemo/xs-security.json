@@ -1,0 +1,16 @@
+{
+	"xsappname": "launchpaddemo",
+	"foreign-scope-references": ["$ACCEPT_GRANTED_SCOPES"],
+	"authorities": ["$ACCEPT_GRANTED_AUTHORITIES"],
+	"scopes": [{
+		"name": "$XSAPPNAME.Display",
+		"description": "display"
+	}],
+	"role-templates": [{
+		"name": "launchpad_display",
+		"description": "Role for displaying the launchpad",
+		"scope-references": [
+			"$XSAPPNAME.Display"
+		]
+	}]
+}
