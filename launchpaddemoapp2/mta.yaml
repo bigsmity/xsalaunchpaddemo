@@ -80,6 +80,7 @@ resources:
    parameters:
       service: xsuaa
       service-plan: space
+      path: xs-security.json
    type: com.sap.xs.uaa
    
  - name: flp-launchpaddemoapp2-client
