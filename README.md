@@ -10,7 +10,7 @@ launchpaddemoapp2 has been updated to control tile visibility via scopes. To vie
 
 If you wish to disable this functionality, simply remove the following line from the site-content.json and manifest.json files in launchpaddemoapp2
 
-"oAuthScopes": ["$XSAPPNAME.Display"]
+"oAuthScopes": ["$XSAPPNAME.view"]
 
 
 
