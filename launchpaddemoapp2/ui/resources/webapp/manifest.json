@@ -128,7 +128,9 @@
 			}
 		}
 	},
-	"sap.platform.cf": {},
+	"sap.platform.cf": {
+		"oAuthScopes": ["$XSAPPNAME.Display"]
+	},
 	"sap.platform.runtime": {
 		"componentProperties": {
 			"url": "/resources/webapp"
