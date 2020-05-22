@@ -129,7 +129,7 @@
 		}
 	},
 	"sap.platform.cf": {
-		"oAuthScopes": ["$XSAPPNAME.Display"]
+		"oAuthScopes": ["$XSAPPNAME.view"]
 	},
 	"sap.platform.runtime": {
 		"componentProperties": {
