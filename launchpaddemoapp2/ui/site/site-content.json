@@ -53,6 +53,9 @@
 				"componentName": "launchpaddemoapp2_ui",
 				"_version": "1.2.0"
 			},
+			"sap.platform.cf": {
+      				"oAuthScopes": ["$XSAPPNAME.view"]	
+			},
 			"sap.platform.runtime": {
 				"componentProperties": {
 					"url": "/"
