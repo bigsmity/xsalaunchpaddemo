@@ -1,0 +1,19 @@
+{
+	"xsappname": "launchpaddemoapp2",
+	"scopes": [{
+		"name": "$XSAPPNAME.view",
+		"description": "View-only access to application",
+		"granted-apps": ["launchpaddemo!i2"],
+		"grant-as-authority-to-apps": ["launchpaddemo!i2"]
+	}, {
+		"name": "$XSAPPNAME.edit",
+		"description": "Edit access to application",
+		"granted-apps": ["launchpaddemo!i2"],
+		"grant-as-authority-to-apps": ["launchpaddemo!i2"]
+	}],
+	"role-templates": [{
+		"name": "launchpaddemoapp2_display",
+		"description": "Role for launchpaddemoapp2 display",
+		"scope-references": ["$XSAPPNAME.view", "$XSAPPNAME.edit"]
+	}]
+}
