@@ -5,7 +5,7 @@
 	},
 	"dependencies": {
 		"@sap/site-app-server": "^1.9.x",
-		"@sap/approuter": "6.1.0"
+		"@sap/approuter": "16.7.2"
 
 	},
 	"scripts": {
